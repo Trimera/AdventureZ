@@ -257,19 +257,6 @@ public class OrcEntity extends HostileEntity {
                 this.resetCooldown();
                 this.mob.swingHand(Hand.MAIN_HAND);
                 this.mob.tryAttack(target);
-                if (!this.orcEntity.isBigOrc() && this.orcEntity.inventory.isEmpty() && this.orcEntity.getWorld().getRandom().nextFloat() <= 0.3F && target instanceof PlayerEntity) {
-                    PlayerEntity playerEntity = (PlayerEntity) target;
-                    for (int i = 45; i > 0; i--) {
-                        if (!playerEntity.getInventory().getStack(i).isEmpty() && playerEntity.getInventory().getStack(i).getItem() instanceof ToolItem
-                                && playerEntity.getWorld().getRandom().nextFloat() < 0.3F) {
-                            this.orcEntity.inventory.setStack(0, playerEntity.getInventory().getStack(i));
-                            this.orcEntity.setItemId(this.orcEntity.inventory.getStack(0).getItem());
-                            playerEntity.getInventory().setStack(i, ItemStack.EMPTY);
-                            break;
-                        }
-                    }
-
-                }
             }
 
         }
