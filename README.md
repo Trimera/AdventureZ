@@ -1,3 +1,6 @@
+This is a fork of AdventureZ by Globox_Z.
+
+
 # AdventureZ
 AdventureZ is a creature mod.
 
